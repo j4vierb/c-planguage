@@ -32,6 +32,7 @@ int get_line(char arr[], int size)
     if(prev == '/' && c == '/') {
       can_write = 0;
     } else if(c == '\n') {
+      printf("%c", c);
       can_write = 1;
       arr[i] = c;
       i++;
