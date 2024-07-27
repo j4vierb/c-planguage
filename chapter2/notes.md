@@ -117,4 +117,32 @@ Se pueden aplicar a operadores integrales como char, short, int y long, sean con
 - `>>` right shift
 - ~ complemento a uno
 
+Los operadores de desplazamiento realizan desplazamientos en el operando de la izquierda tantas veces como el de la derecha lo indique, no puede ser negativo. Por tanto, x << 2 desplaza el valor de x en 2 posiciones, llenando los vacios con 0.
+
+El operador unario `~` produce el complemento a uno de un entero, es decir, convierte 1's en 0's y viceversa. 
+
+```c
+x = x & ~077 // ~077 = ~(111111)_2 = 000000
+    // por tanto x = x & 000000
+```
+
+### Enmascarar bits
+
+Esto se refiere a utilizar una mascara para seleccionar, limpiar o modificar bits especificos de una variable. Se puede:
+
+- Limpiar bits
+- Seleccionar bits
+- Invertir bits
+
+Con mascara de bits se refiere a una secuencia de bits para manipular o extraer ciertos bits de otro valor.
+
+Es necesario notar que `x & ~077` es independiente de la longitud de la palabra. Y la longitud de la palabra se refiere a la cantidad de bits que una unidad de datos puede manejar en un arquitectura de computadora.  
+
+> [!Ya entendí]
+> Lo que hace `x = x & ^077` y lo que hace `x = x & ^0177700` es distinto.
+> El primero mantiene los primeros 6 bits ya que `077 = 111111`. El segundo
+> limpia los primeros 6 bits, es decir, los borra al realizar la operación AND. 
+> La principal diferencia se debe a que el segundo para funcionar asume que x es una
+> variable de 16 bits, para mantener estos primeros 10 bits. Mientras que el segundo
+> solo mantiene los primeros 6 bits independientes de la longitud de la palabra.
 
