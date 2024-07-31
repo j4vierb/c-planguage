@@ -21,5 +21,13 @@ int strindex(char s[], char t[])
 }
 ```
 
+Una función minima es:
+
+```c
+dummy() {}
+```
+
 Para compilar y cargar distintos archivos de código fuente en UNIX es `cc file1.c file2.c ...`, esto compila los tres archivos y los ubica en 3 archivos de código objeto con extensión .o, y luego los carga todos en un archivo ejecutable a.out. 
+
+
 
