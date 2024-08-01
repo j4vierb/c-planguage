@@ -52,3 +52,29 @@ Si por ejemplo, la declaración de la función no incluye argumentos `double ato
 
 A este punto hay varias dudas sobre como se guardan números enteros, positivos y negativos, y además, números de coma flotante. 
 
+## 4.3 Variables externas
+
+Estas son variables que se encuentran fuera de cualquier función, y son potencialmente disponibles para muchas funciones. Las funciones por si mismas son siempre externas. 
+Por defecto las variables y funciones externas tienen la propiedad de que todas se referencian por el mismo nombre (esta propiedad se llama `external linkage`).
+Las variables automaticas existen cuando la función es ingresada, y desaparecen cuando la función sale. Las funciones externas no son así, estas son permanentes.
+
+En la notación polaca los operandos estan primero que los operadores, es decir, si tengo la expresión `+ 10 5` el resultado será 15. La notación polaca inversa incluye los operadores al final, es decir, si tengo la expresión `3 10 5 + *` es equivalente a `(3 + 10) * 5`. 
+
+```python
+while(next operator or operand is not EOF indicator)
+    if(number)
+        push it
+    else if(operator)
+        pop operands
+        do operation
+        push result
+    else if(newline)
+        pop and print top of stack
+    else
+        error
+```
+
+Se decide almacenar el stack y la información asociada en variables externas que son accesibles a las funciones push y pop, pero no a main.
+
+Todo listo hasta página 70.
+
