@@ -76,5 +76,15 @@ while(next operator or operand is not EOF indicator)
 
 Se decide almacenar el stack y la información asociada en variables externas que son accesibles a las funciones push y pop, pero no a main.
 
-Todo listo hasta página 70.
+### Explicación detallada del funcionamiento
+
+El archivo `main.c` es el punto de entrada del programa. En este se obtiene el operando o la operación y luego realiza las determinadas operaciones sobre la pila según sea el caso. Podemos comenzar de abajo hacia arriba.
+
+La función `getop(char s[])` elimina basura de la entrada, retorna los operadores o retorna un indicador de que ya se guardo un número. El parametro de entrada es un arreglo de caracteres sobre el cual se escriben los números y los operadores. 
+
+El archivo `stack.c` se encarga de manejar la pila. Se definen como ariables externas al puntero de la pila y la pila misma. Lo que hace la función `push(double f)` es añadir el valor a la pila si aún hay espacio. Mientras que la función `pop(void)` retorna el valor de la pila que se encuentra en el puntero de la pila, de lo contrario se retorna un 
+
+Durante la definición de `getop(char s[])` se utilizan las funciones `getch(void)` y `ungetch(int c)`. 
+
+
 
